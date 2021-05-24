@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  background-color: #222;
+  width: 100%;
+  height: 100vh;
+
+}
+/* Todolist */
+.divcontainer{
+  width: 400px;
+  height: 500px;
+  background-color: #222;
+  /* position: absolute;
+  transform: translateX(-50%); */
+  color: #fff;
+  margin: auto;
+
+border-radius: 15px;
+border: 10px;
+/* text-align:none; */
+box-shadow: 10px 10px 13px #000,
+            -10px -10px 13px #0007;
+/* box-shadow: 10px 10px 13px #0002,
+           -10px -10px 13px #fff7; */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.todoform{
+margin: 20px;
+height: 40px;
+width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li{
+  padding: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ul {
+  padding: 5px;
+  margin: 5px 0;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
+li{
+  padding: 7px 7px;
+  /* margin: 15px 0; */
+  list-style: none;
+  text-transform: capitalize;
+  box-shadow: 5px 5px 5px #000,
+              -5px -5px 5px #0007;
+animation: opacity 0.2s linear;
+}
+@keyframes opacity {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale(0,7);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+ul li .listRow{
+  float:right;
+
+
+}
+ul li .listRow i{
+margin-left: 10px;
+cursor: pointer;
+
+}
+.secondinput{
+  padding: 5px
+}
+.edit{
+  color: teal;
+}
+.delete{
+  color:crimson;
+}
+
+.active{
+  animation: del 0.3s linear;
+}
+@keyframes del {
+  to{
+    opacity: 0s;
+    transform: rotate(15deg) skew(25deg) scale(0.5);
   }
+}
+
+.todobutton, .todoinput{
+border:none;
+width: 250px;
+height: 100%;
+margin-left:25px;
+background: transparent;
+border-radius: 5px;
+outline: none;
+padding:0 5px;
+box-shadow:inset -5px -5px 5px #000,
+          inset  5px 5px 5px #000;
+
+}
+
+.todoinput{
+  background-color: #000;
+  color: #fff;
+}
+.todobutton{
+  width: 80px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin-left: 15px;
+  background: #000;
+  /* background-color: #222!important; */
+  color: #fff;
+  box-shadow:-5px -5px 5px #000,
+             5px 5px 5px #222;
+
+}
+
+.todotext{
+text-align: center;
+font-size: 50px;
+text-transform: capitalize;
+margin-top: 50px ;
+color: #222;
+text-shadow: -3px -3px 3px #222,
+            3px 3px 3px #000;
+}
+h2{
+  text-align: center;
+  font-size: 2em;
+  color: teal;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  transform: capitalize;
+
+}
+ul li input{
+  background: transparent;
+  width: 70%;
+  border: none;
+  outline: none;
+  box-shadow:inset -2px -2px 2px #000,
+            inset  2px 2px 2px #000;
+color: #fff;
 }
